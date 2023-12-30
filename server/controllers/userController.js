@@ -2,7 +2,6 @@ const User = require('../models/userModel');
 
 const mongoose = require('mongoose')
 
-// get all users
 const getUsers = async (req, res) => {
     // the object is empty because we want ALL users from our db
     const users = await User.find({}).sort({createdAt: -1})
@@ -10,7 +9,6 @@ const getUsers = async (req, res) => {
     res.status(200).json(users)
 }
 
-// get a single user
 const getUser = async (req, res) => {
     const { id } = req.params
 
@@ -27,21 +25,18 @@ const getUser = async (req, res) => {
     res.status(200).json(user)
 }
 
-
-// create new user
 const createUser = async (req, res) => {
-    const {profession,phoneNumber,load} = req.body
+    const {id,first_name,last_name,location,picture_path,profession,interests,achievements,communities} = req.body
 
     //add doc to db
     try {
-        const user = await User.create({profession,phoneNumber,load})
+        const user = await User.create({id,first_name,last_name,location,picture_path,profession,interests,achievements,communities})
         res.status(200).json(user)
     } catch (error) {
         res.status(400).json({error: error.message})
     }
 }
 
-// delete a user
 const deleteUser = async(req, res) => {
     const { id } = req.params
 
@@ -59,7 +54,6 @@ const deleteUser = async(req, res) => {
 }
 
 
-// update a user
 const updateUser = async (req, res) => {
     const { id } = req.params
 
