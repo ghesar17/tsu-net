@@ -9,16 +9,15 @@ const {
 
 const router = express.Router();
 
-// GET all posts of user
-router.get('/:id',getPosts)
+// anyone can get all a user's posts
+router.get('/:user_name', getPosts)
 
-// POST a new post
-router.post('/:id',createPost)
+// only user can use these operations
+router.post('/',createPost)
 
-// DELETE a post
-router.delete('/:id',deletePost)
+// requires the post id for following operations
+router.delete('/:postID',deletePost)
 
-// UPDATE a post
-router.patch('/:id',updatePost)
+router.patch('/:postID',updatePost)
 
 module.exports = router

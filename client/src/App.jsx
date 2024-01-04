@@ -17,7 +17,7 @@ function App() {
                 <div className={"pages"}>
                     <Routes>
                         <Route path={"/"}
-                               element={<Home/>}
+                               // element={<Home/>}
                         />
                     </Routes>
                 </div>

@@ -1,21 +1,16 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { tsunet } from '';
 
-const Navbar = () => {
-    return (
+const NavBar = () => {
+ return (
+   <nav>
+     <ul>
+       <li><Link to="/">Home</Link></li>
+       <li><Link to="/about">About</Link></li>
+       <li><Link to="/contact">Contact</Link></li>
+     </ul>
+   </nav>
+ );
+};
 
-
-        <nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-            <li><Link to="/about">About</Link></li>
-            </ul>
-            <div className={"container"}>
-                <Link to={'/'}>
-                    <h1>Profile</h1>
-                </Link>
-            </div>
-        </nav>
-    )
-}
-export default Navbar
+export default NavBar;

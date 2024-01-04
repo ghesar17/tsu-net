@@ -10,19 +10,14 @@ const {
 
 const router = express.Router();
 
-// GET all user
 router.get('/',getUsers)
 
-// GET a single user
-router.get('/:id',getUser)
+router.get('/:user_name',getUser)
 
-// POST a new user
 router.post('/',createUser)
 
-// DELETE a user
-router.delete('/:id',deleteUser)
+router.delete('/:user_name',deleteUser)
 
-// UPDATE a user
-router.patch('/:id',updateUser)
+router.patch('/:user_name',updateUser)
 
 module.exports = router
