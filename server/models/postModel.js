@@ -12,6 +12,10 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
+    community: {
+      type: String,
+      required: true,
+    },
     content: {
       type: String,
       required: true,

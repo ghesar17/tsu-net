@@ -1,38 +1,20 @@
-import {useEffect} from 'react'
-
 // components
-import UserDetails from '../components/UserDetails.jsx'
-import UserForm from "../components/UserForm.jsx";
+import NavBar from "../components/navbar.jsx";
+import LeftSidebar from "../components/left-sidebar/sidebar-container.jsx";
+import MainFeedContainer from "../components/main-feed/main-feed-container.jsx";
 
 // hooks
-import { useUsersContext } from "../hooks/useUsersContext.jsx";
+// import { useUsersContext } from "../hooks/useUsersContext.jsx";
+
+import "../App.css";
 
 const Home = () => {
-    const {users, dispatch} = useUsersContext()
-
-    useEffect(() => {
-        const fetchUsers = async () => {
-            const response = await fetch('http://localhost:4000/api/users')
-            const json = await response.json()
-
-            if (response.ok) {
-                dispatch({type: 'SET_USERS', payload: json})
-            }
-        }
-
-        fetchUsers()
-
-    }, [])
-
-    return (
-        <div className={"home"}>
-            <div className={"users"}>
-                {users && users.map((user) => (
-                    <UserDetails key={user._id} user={user}/>
-                ))}
-            </div>
-            <UserForm/>
-        </div>
-    )
-}
-export default Home
+  return (
+    <div className={"app-container"}>
+      <NavBar />
+      <LeftSidebar />
+      <MainFeedContainer />
+    </div>
+  );
+};
+export default Home;

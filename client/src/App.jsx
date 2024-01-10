@@ -1,30 +1,26 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages and components
-
-import Navbar from "./components/navbar.jsx";
 import Home from "./pages/home.jsx";
+import PopularPosts from "./pages/popular-posts.jsx";
+import NotFound from "./pages/not-found.jsx";
 
-import './App.css'
+import "./App.css";
 
 function App() {
-
   return (
     <>
-        <div className='App'>
-            <BrowserRouter>
-                <Navbar/>
-                <div className={"pages"}>
-                    <Routes>
-                        <Route path={"/"}
-                               // element={<Home/>}
-                        />
-                    </Routes>
-                </div>
-            </BrowserRouter>
-        </div>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/popular"} element={<PopularPosts />} />
+            <Route path={"/not-found"} element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
