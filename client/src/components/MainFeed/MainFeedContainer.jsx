@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "../../styles/main-feed/mainfeed-post.css";
-import PostDetails from "./main-feed-post-details.jsx";
+import PostDetails from "./PostDetails.jsx";
 
 const MainFeedContainer = () => {
   const [posts, setPosts] = useState([]);

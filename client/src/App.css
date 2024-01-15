@@ -1,17 +1,10 @@
-/*declare css variables*/
-/*:root {*/
-/*    --primary: #1aac83;*/
-/*    --error: #e7195a;*/
-/*}*/
-
 body {
     background: #171515;
     margin: 0;
 }
 
 .app-container {
-
     display: flex;
-    justify-content: center; /* Aligns items horizontally */
-    align-items: center; /* Aligns items vertically */
+    justify-content: center;
+    align-items: center;
 }

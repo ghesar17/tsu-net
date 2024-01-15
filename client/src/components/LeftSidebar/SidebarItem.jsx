@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
-import "../../styles/sidebar-container/sidebar-container.css";
+import "../../styles/sidebar-container.css";
 
-const SidebarItem = (props) => {
+const SidebarItem = ({ link, icon, text }) => {
   return (
-    <li className={"sidebar-item"}>
-      <Link to={props.link} className={"sidebar-button"}>
+    <li>
+      <Link className={"sidebar-item"} to={link}>
         <IconContext.Provider
           value={{ style: { paddingRight: "15px" }, size: "20px" }}
         >
-          {props.icon}
+          {icon}
         </IconContext.Provider>
-        {props.text}
+        {text}
       </Link>
     </li>
   );

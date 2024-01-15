@@ -1,7 +1,7 @@
 // components
-import NavBar from "../components/navbar.jsx";
-import LeftSidebar from "../components/left-sidebar/sidebar-container.jsx";
-import MainFeedContainer from "../components/main-feed/main-feed-container.jsx";
+import Navbar from "../components/Navbar.jsx";
+import LeftSidebar from "../components/LeftSidebar/SidebarContainer.jsx";
+import MainFeedContainer from "../components/MainFeed/MainFeedContainer.jsx";
 
 // hooks
 // import { useUsersContext } from "../hooks/useUsersContext.jsx";
@@ -11,7 +11,7 @@ import "../App.css";
 const Home = () => {
   return (
     <div className={"app-container"}>
-      <NavBar />
+      <Navbar />
       <LeftSidebar />
       <MainFeedContainer />
     </div>

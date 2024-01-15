@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
 import { AiOutlineQuestionCircle } from "react-icons/ai";
-
 import { IoPersonOutline } from "react-icons/io5";
 import { PiDotsThreeOutlineFill } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
+
 import Tsunet from "../assets/tsunet-white.png";
 
 import "../styles/navbar.css";
 
-const NavBar = () => {
+const Navbar = () => {
   const [showOptions, setShowOptions] = useState(false);
   const settingsRef = useRef();
 
@@ -88,4 +88,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages and components
-import Home from "./pages/home.jsx";
-import PopularPosts from "./pages/popular-posts.jsx";
-import NotFound from "./pages/not-found.jsx";
+import Home from "./pages/Home.jsx";
+import PopularPosts from "./pages/PopularPosts.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 import "./App.css";
 
