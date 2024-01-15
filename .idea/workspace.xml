@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="Added UI layout">
-      <change afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/left-sidebar/sidebar-container.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/left-sidebar/sidebar-group.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/left-sidebar/sidebar-item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/main-feed/main-feed-container.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/main-feed/main-feed-post-details.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainFeed/PostDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/post-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PostForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/not-found.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/NotFound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/popular-posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/PopularPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/sidebar-container/sidebar-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/sidebar-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/communityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/communityController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/communities.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/communities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-    </list>
+    <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added layout for sidebar" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,6 +153,7 @@
       <workItem from="1705194821328" duration="6714000" />
       <workItem from="1705254126770" duration="1156000" />
       <workItem from="1705269885975" duration="599000" />
+      <workItem from="1705286671395" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="Add Post field to database, api routes for Post, add rudimentary UI">
       <option name="closed" value="true" />
@@ -208,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704919651947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added layout for sidebar">
+      <option name="closed" value="true" />
+      <created>1705286722491</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705286722491</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +272,7 @@
     <MESSAGE value="Add Post field to database, api routes for Post, add rudimentary UI" />
     <MESSAGE value="Add comments, communities collections to db, and their api routes" />
     <MESSAGE value="Added UI layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UI layout" />
+    <MESSAGE value="added layout for sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="added layout for sidebar" />
   </component>
 </project>
