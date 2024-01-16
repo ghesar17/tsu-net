@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 
 import "../../styles/sidebar-container.css";
 
-const SidebarItem = ({ link, icon, text }) => {
+const SidebarItem = ({ link, icon, community_name, title }) => {
   return (
     <li>
       <Link className={"sidebar-item"} to={link}>
@@ -12,7 +12,8 @@ const SidebarItem = ({ link, icon, text }) => {
         >
           {icon}
         </IconContext.Provider>
-        {text}
+        {community_name}
+        {title}
       </Link>
     </li>
   );

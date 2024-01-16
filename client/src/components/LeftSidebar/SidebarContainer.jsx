@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 
 function LeftSidebar() {
   const [randomCommunities, setRandomCommunities] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRandomCommunities = async () => {
@@ -20,7 +19,6 @@ function LeftSidebar() {
       if (response.ok) {
         console.log(json);
         setRandomCommunities(json);
-        setLoading(false);
       }
     };
     fetchRandomCommunities();
@@ -29,36 +27,10 @@ function LeftSidebar() {
   return (
     <div className="sidebar-container">
       <ul>
-        <SidebarItem link={"/"} icon={<IoHomeOutline />} text={"For You"} />
-        <SidebarItem link={"/popular"} icon={<CiStar />} text={"Popular"} />
-        {!loading && (
-          <Dropdown title={"Communities"} communities={randomCommunities} />
-        )}
-        <Dropdown
-          title={"Categories"}
-          submenu={[
-            {
-              title: "Language",
-              communities: ["Python", "JavaScript", "C", "Java"],
-            },
-            {
-              title: "Learning",
-              communities: [
-                "Web Development",
-                "Machine Learning",
-                "Data Science",
-              ],
-            },
-            {
-              title: "Misc",
-              communities: [
-                "Content Creation",
-                "Coding Competitions",
-                "General Advice",
-              ],
-            },
-          ]}
-        />
+        <SidebarItem link={"/"} icon={<IoHomeOutline />} title={"For You"} />
+        <SidebarItem link={"/popular"} icon={<CiStar />} title={"Popular"} />
+        <Dropdown title={"Communities"} communities={randomCommunities} />
+        {/*<Dropdown title={"Categories"} />*/}
       </ul>
     </div>
   );

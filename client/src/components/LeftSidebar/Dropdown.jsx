@@ -5,16 +5,16 @@ import { IconContext } from "react-icons";
 
 import SidebarItem from "./SidebarItem.jsx";
 
-const Dropdown = ({ title, communities, submenu }) => {
+const Dropdown = ({ title, communities }) => {
   const [open, setOpen] = useState(false);
 
-  const renderItems = (items) => {
+  const renderCommunities = (items) => {
     return items.map((item, index) => (
       <SidebarItem
         key={index}
         link={item.link}
         icon={item.icon}
-        text={item.name}
+        community_name={item.community_name}
       />
     ));
   };
@@ -32,16 +32,15 @@ const Dropdown = ({ title, communities, submenu }) => {
 
       {open && (
         <ul>
-          {communities ? renderItems(communities) : null}
-          {submenu &&
-            submenu.map((item, index) => (
-              <Dropdown
-                key={index}
-                title={item.title}
-                communities={item.communities}
-                submenu={item.submenu}
-              />
-            ))}
+          {communities ? renderCommunities(communities) : null}
+          {/*{props.dropdown &&*/}
+          {/*  dropdown.map((item, index) => (*/}
+          {/*    <Dropdown*/}
+          {/*      key={index}*/}
+          {/*      community_name={item.community_name}*/}
+          {/*      communities={item.communities}*/}
+          {/*    />*/}
+          {/*  ))}*/}
         </ul>
       )}
     </>
