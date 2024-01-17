@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added layout for sidebar">
-      <change afterPath="$PROJECT_DIR$/client/src/styles/community-form.css" afterDir="false" />
+    <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added form to add community">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PostForm.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705286722491</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added form to add community">
+      <option name="closed" value="true" />
+      <created>1705528798817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705528798817</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +286,7 @@
     <MESSAGE value="Add comments, communities collections to db, and their api routes" />
     <MESSAGE value="Added UI layout" />
     <MESSAGE value="added layout for sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="added layout for sidebar" />
+    <MESSAGE value="added form to add community" />
+    <option name="LAST_COMMIT_MESSAGE" value="added form to add community" />
   </component>
 </project>
