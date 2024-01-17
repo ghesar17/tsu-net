@@ -5,6 +5,7 @@ const {
   createPost,
   getPost,
   getUserPosts,
+  getRandomPosts,
   updatePost,
   deletePost,
 } = require("../controllers/postController");
@@ -14,6 +15,8 @@ const router = express.Router();
 const upload = multer({ dest: "uploads/posts/" });
 
 router.get("/user/:user_name", getUserPosts);
+
+router.get("/", getRandomPosts);
 
 router.get("/:postID", getPost);
 

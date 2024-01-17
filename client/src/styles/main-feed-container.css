@@ -1,0 +1,15 @@
+.main-feed-container {
+    position: fixed;
+    height: calc(100vh - 60px);
+    top: 60px;
+}
+
+.post-details {
+    font-family: var(--font-stack);
+    color: white;
+    padding: 10px;
+}
+
+.h4 {
+    color: black;
+}

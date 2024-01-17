@@ -27,6 +27,15 @@ const getUserPosts = async (req, res) => {
   res.status(200).json(posts);
 };
 
+const getRandomPosts = async (req, res) => {
+  try {
+    const randomPosts = await Post.aggregate([{ $sample: { size: 10 } }]);
+    res.status(200).json(randomPosts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 // assume authorization has been given to end user for following methods
 const createPost = async (req, res) => {
   const { picture_path } = req.file;
@@ -103,6 +112,7 @@ const updatePost = async (req, res) => {
 module.exports = {
   getPost,
   getUserPosts,
+  getRandomPosts,
   createPost,
   deletePost,
   updatePost,

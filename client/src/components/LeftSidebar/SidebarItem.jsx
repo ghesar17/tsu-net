@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
-import "../../styles/sidebar-container.css";
-
 const SidebarItem = ({ link, icon, community_name, title }) => {
   return (
     <li>

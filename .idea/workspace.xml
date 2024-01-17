@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added layout for sidebar">
-      <change afterPath="$PROJECT_DIR$/server/data/communities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/main-feed-container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/main-feed/main-feed-container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/main-feed/mainfeed-post.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/sidebar-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/sidebar-container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/postController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/postController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/postModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/postModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/communities.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/communities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,29 +61,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.10.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.10.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ghesa/WebstormProjects/tsu-net/server/models&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\ghesa\\WebstormProjects\\tsu-net\\server\\node_modules\\prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;background.image.plus&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "20.10.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.0",
+    "last_opened_file_path": "C:/Users/ghesa/WebstormProjects/tsu-net/server/models",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\ghesa\\WebstormProjects\\tsu-net\\server\\node_modules\\prettier",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ghesa\WebstormProjects\tsu-net\server\models" />
@@ -167,6 +170,7 @@
       <workItem from="1705286671395" duration="54000" />
       <workItem from="1705337481429" duration="10038000" />
       <workItem from="1705358603327" duration="7876000" />
+      <workItem from="1705428160358" duration="12750000" />
     </task>
     <task id="LOCAL-00001" summary="Add Post field to database, api routes for Post, add rudimentary UI">
       <option name="closed" value="true" />

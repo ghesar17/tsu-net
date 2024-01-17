@@ -1,53 +1,49 @@
 .sidebar-container {
     font-family: 'Barlow', sans-serif;
+    font-size: 15px;
     position: fixed;
     left: 13%;
-    height: calc(100vh - 60px);
     top: 60px;
 }
 
 .sidebar-item {
-    color: white;
     display: flex;
     align-items: center;
-    height: 30px;
-    padding: 5px;
+    width: 200px;
+    height: 35px;
+    padding: 5px 5px 5px 10px;
+    color: white;
     text-decoration: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.sidebar-item:hover {
+    background-color: #282020;
 }
 
 .sidebar-dropdown {
-    color: white;
     display: flex;
     align-items: center;
-    height: 30px;
-    padding: 5px;
-    margin-top: 15px;
+    width: 215px;
+    height: 45px;
+    padding: 5px 5px 5px 10px;
+    color: white;
     text-decoration: none;
-}
-
-button {
+    border-radius: 20px;
     background-color: transparent;
     border-width: 0;
     font-family: inherit;
     font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    line-height: inherit;
 }
 
-.dropdown-icon {
-    padding-left: 40px;
-    width: 10px;
-    height: 10px;
+.sidebar-dropdown:hover {
+    background-color: #282020;
 }
 
 h4 {
     color: gray;
-}
-
-.icon-button {
-    margin-right: 20px;
-
 }
 
 ul {
@@ -59,7 +55,7 @@ ul {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .sidebar-container {
         display: none;
     }

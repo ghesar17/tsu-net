@@ -10,24 +10,14 @@ const {
 
 const router = express.Router();
 
+const upload = multer({ dest: "uploads/community/icons/" });
+
 router.get("/:community_name", getCommunity);
 
 router.get("/", getCommunity);
 
 // only user can use these operations
-router.post("/", createCommunity);
-
-// router.post("/post/:id/image", postUpload.single("image"), (req, res) => {
-//   res.send({ message: "Post image uploaded successfully" });
-// });
-//
-// router.post(
-//   "/user/:id/profilePic",
-//   userUpload.single("profilePic"),
-//   (req, res) => {
-//     res.send({ message: "Profile picture uploaded successfully" });
-//   },
-// );
+router.post("/", upload.single("picture_path"), createCommunity);
 
 // requires the community id for following operations
 router.delete("/:community_name", deleteCommunity);

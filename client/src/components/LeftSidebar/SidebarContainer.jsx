@@ -30,7 +30,6 @@ function LeftSidebar() {
         <SidebarItem link={"/"} icon={<IoHomeOutline />} title={"For You"} />
         <SidebarItem link={"/popular"} icon={<CiStar />} title={"Popular"} />
         <Dropdown title={"Communities"} communities={randomCommunities} />
-        {/*<Dropdown title={"Categories"} />*/}
       </ul>
     </div>
   );
