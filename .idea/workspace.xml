@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added layout for sidebar">
-      <change afterPath="$PROJECT_DIR$/client/src/styles/main-feed-container.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/community-form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainFeed/MainFeedContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/main-feed/main-feed-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/main-feed/mainfeed-post.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/sidebar-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/sidebar-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/postController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/postController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/communities.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/communities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/PostForm.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +69,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\ghesa\\WebstormProjects\\tsu-net\\server\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "/Users/ghesarphanday/WebstormProjects/tsu-net/server/node_modules/prettier",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",

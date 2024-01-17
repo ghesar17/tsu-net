@@ -1,0 +1,8 @@
+.community-form {
+    position: fixed;
+    height: calc(100vh - 60px);
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
