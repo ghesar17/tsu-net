@@ -1,5 +1,6 @@
 const express = require("express");
-const multer = require("multer");
+
+const upload = require("../multerConfig");
 
 const {
   getCommunity,
@@ -10,14 +11,12 @@ const {
 
 const router = express.Router();
 
-const upload = multer({ dest: "uploads/community/icons/" });
-
 router.get("/:community_name", getCommunity);
 
 router.get("/", getCommunity);
 
 // only user can use these operations
-router.post("/", upload.single("picture_path"), createCommunity);
+router.post("/", upload.single("icon"), createCommunity);
 
 // requires the community id for following operations
 router.delete("/:community_name", deleteCommunity);

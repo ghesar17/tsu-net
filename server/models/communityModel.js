@@ -10,9 +10,6 @@ const communitySchema = new mongoose.Schema(
     icon: {
       type: String,
     },
-    banner: {
-      type: String,
-    },
     description: {
       type: String,
       required: true,

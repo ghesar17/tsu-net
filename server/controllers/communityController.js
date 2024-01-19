@@ -24,15 +24,16 @@ const getCommunity = async (req, res) => {
 
 // assume authorization has been given to end user for following methods
 const createCommunity = async (req, res) => {
-  const { community_name, icon, banner, description, memberIDs, postIDs } =
-    req.body;
+  const { community_name, description, memberIDs, postIDs } = req.body;
 
-  //add doc to db
+  const iconFile = req.file;
+
+  const icon = iconFile ? `uploads/icons/${iconFile.filename}` : null;
+
   try {
     const community = await Community.create({
       community_name,
       icon,
-      banner,
       description,
       memberIDs,
       postIDs,
