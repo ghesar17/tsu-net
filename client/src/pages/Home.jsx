@@ -1,20 +1,53 @@
 // components
 import Navbar from "../components/Navbar.jsx";
-import LeftSidebar from "../components/LeftSidebar/SidebarContainer.jsx";
-import MainFeedContainer from "../components/MainFeed/MainFeedContainer.jsx";
+import Sidebar from "../components/Sidebar.jsx";
+import MainFeed from "../components/MainFeed.jsx";
 
-// hooks
-// import { useUsersContext } from "../hooks/useUsersContext.jsx";
+import {
+  Box,
+  Grid,
+  Button,
+  Modal,
+  Typography,
+  Backdrop,
+  Fab,
+  useMediaQuery,
+} from "@mui/material";
 
 import "../App.css";
 
 const Home = () => {
+  const isNonMobileScreens = useMediaQuery("(min-width: 1200px)");
+
   return (
-    <div className={"app-container"}>
+    <Box display={isNonMobileScreens ? "flex" : "block"}>
       <Navbar />
-      <LeftSidebar />
-      <MainFeedContainer />
-    </div>
+      {isNonMobileScreens && <Sidebar />}
+
+      <Grid
+        container
+        direction="row"
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        gap="1rem"
+        sx={{
+          mt: "55px",
+          ml: isNonMobileScreens ? "23vw" : "0",
+        }}
+      >
+        <Grid item xs={12} sm={12} md={8.5} lg={7.5}>
+          <MainFeed />
+        </Grid>
+
+        <Grid
+          item
+          sx={{ mt: "10px", height: "400px" }}
+          bgcolor="gray"
+          md={3}
+          lg={3}
+        />
+      </Grid>
+    </Box>
   );
 };
 export default Home;

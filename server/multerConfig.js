@@ -2,7 +2,6 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 
-// Ensure upload directories exist
 const createUploadDirs = () => {
   const dirs = [
     path.join(__dirname, "uploads", "icons"),

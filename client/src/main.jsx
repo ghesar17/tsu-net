@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { UsersContextProvider } from "./context/UserContext.jsx";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme"; // Import the custom theme
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <UsersContextProvider>
+    <ThemeProvider theme={theme}>
       <App />
-    </UsersContextProvider>
-  </React.StrictMode>,
+    </ThemeProvider>
+  </React.StrictMode>
 );

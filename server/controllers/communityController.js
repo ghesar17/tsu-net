@@ -1,3 +1,6 @@
+const sharp = require("sharp");
+const fs = require("fs");
+
 const Community = require("../models/communityModel");
 const User = require("../models/userModel");
 
@@ -26,18 +29,27 @@ const getCommunity = async (req, res) => {
 const createCommunity = async (req, res) => {
   const { community_name, description, memberIDs, postIDs } = req.body;
 
-  const iconFile = req.file;
-
-  const icon = iconFile ? `uploads/icons/${iconFile.filename}` : null;
-
   try {
+    const resizedIcon = await sharp(req.file.buffer)
+      .resize({
+        width: 200,
+        height: 200,
+        fit: sharp.fit.cover,
+        position: sharp.strategy.entropy,
+      })
+      .toBuffer();
+
+    const iconPath = `uploads/icons/${req.file.filename}`;
+    fs.writeFileSync(iconPath, resizedIcon);
+
     const community = await Community.create({
       community_name,
-      icon,
+      icon: iconPath,
       description,
       memberIDs,
       postIDs,
     });
+
     res.status(200).json(community);
   } catch (error) {
     res.status(400).json({ error: error.message });

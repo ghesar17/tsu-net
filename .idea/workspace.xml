@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1a1030-0f74-484f-ab93-5c3f5fb9fa5f" name="Changes" comment="added form to add community">
-      <change afterPath="$PROJECT_DIR$/server/multerConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/Dropdown.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftSidebar/SidebarItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/CreateCommunity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/CreateCommunity.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/communityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/communityController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/communityModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/communityModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/multerConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/multerConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/communities.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/communities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,15 +63,15 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.10.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.10.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ghesa/WebstormProjects/tsu-net/server/models&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/ghesarphanday/WebstormProjects/tsu-net/server/node_modules/prettier&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\ghesa\\WebstormProjects\\tsu-net\\server\\node_modules\\prettier&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -172,6 +168,8 @@
       <workItem from="1705428160358" duration="12750000" />
       <workItem from="1705532297096" duration="8696000" />
       <workItem from="1705637691065" duration="10492000" />
+      <workItem from="1705769647662" duration="2495000" />
+      <workItem from="1705795443030" duration="3017000" />
     </task>
     <task id="LOCAL-00001" summary="Add Post field to database, api routes for Post, add rudimentary UI">
       <option name="closed" value="true" />

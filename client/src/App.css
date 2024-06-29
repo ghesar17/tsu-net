@@ -1,15 +1,8 @@
 :root {
-    --main-theme-dark: #171515;
-    --font-stack: 'Arial', serif;
+  --main-theme-dark: #171515;
+  --font-stack: "Arial", serif;
 }
 
 body {
-    background: var(--main-theme-dark);
-    margin: 0;
-}
-
-.app-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: var(--main-theme-dark);
 }
