@@ -16,7 +16,7 @@ import {
 
 import "../App.css";
 
-const Home = (props) => {
+const Community = (props) => {
   const isNonMobileScreens = useMediaQuery("(min-width: 1200px)");
 
   return (
@@ -50,4 +50,4 @@ const Home = (props) => {
     </Box>
   );
 };
-export default Home;
+export default Community;

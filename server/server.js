@@ -1,48 +1,30 @@
-require("dotenv").config();
-
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import multer from "multer";
-import path from "path";
+import authRoutes from "./routes/auth.js";
 
-const usersRoutes = require("./routes/users");
-const postsRoutes = require("./routes/posts");
-const commentsRoutes = require("./routes/comments");
-const communitiesRouters = require("./routes/communities");
+import postsRoutes from "../server/routes/posts.js";
+import commentsRoutes from "../server/routes/comments.js";
+import communitiesRouters from "../server/routes/communities.js";
+import usersRoutes from "../server/routes/users.js";
 
-const __dirname = path.dirname(__filename);
 const app = express();
+dotenv.config();
 app.use(express.json());
 app.use(cors());
-app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 // routes
-app.use("/api/users", usersRoutes);
-app.use("/api/posts", postsRoutes);
-app.use("/api/comments", commentsRoutes);
-app.use("/api/communities", communitiesRouters);
+app.use("/users", usersRoutes);
+app.use("/posts", postsRoutes);
+app.use("/comments", commentsRoutes);
+app.use("/communities", communitiesRouters);
 
-// app.post('/auth/register', register);
-// app.patch('/auth/update/:id', update);
-// app.post('/posts', authenticationMiddleware, createPost);
-// app.post('/auth/login', login);
-// app.post('/auth/register/otp', sendRegistrationMail);
+app.use("/auth", authRoutes);
 
 // routes with files attached
-app.post("/auth/register", upload.single("picture"), register);
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
-
-// file storage
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/assets");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  },
-});
-const upload = multer({ storage });
+// app.post("/auth/register", upload.single("picture"), register);
+// app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 // connect to db
 mongoose

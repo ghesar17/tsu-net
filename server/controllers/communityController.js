@@ -1,10 +1,10 @@
-const sharp = require("sharp");
-const fs = require("fs");
+import sharp from "sharp";
+import fs from "fs";
 
-const Community = require("../models/communityModel");
-const User = require("../models/userModel");
+import Community from "../models/communityModel.js";
+import User from "../models/userModel.js";
 
-const getCommunity = async (req, res) => {
+export const getCommunity = async (req, res) => {
   const { community_name } = req.params;
 
   try {
@@ -26,7 +26,7 @@ const getCommunity = async (req, res) => {
 };
 
 // assume authorization has been given to end user for following methods
-const createCommunity = async (req, res) => {
+export const createCommunity = async (req, res) => {
   const { community_name, description, memberIDs, postIDs } = req.body;
 
   try {
@@ -56,7 +56,7 @@ const createCommunity = async (req, res) => {
   }
 };
 
-const deleteCommunity = async (req, res) => {
+export const deleteCommunity = async (req, res) => {
   const { community_name } = req.params;
 
   const community = await Community.findOneAndDelete({
@@ -70,14 +70,14 @@ const deleteCommunity = async (req, res) => {
   res.status(200).json(community);
 };
 
-const updateCommunity = async (req, res) => {
+export const updateCommunity = async (req, res) => {
   const { community_name } = req.params;
 
   const community = await Community.findOneAndUpdate(
     { community_name: community_name },
     {
       ...req.body,
-    },
+    }
   );
 
   if (!community) {
@@ -85,11 +85,4 @@ const updateCommunity = async (req, res) => {
   }
 
   res.status(200).json(community);
-};
-
-module.exports = {
-  getCommunity,
-  createCommunity,
-  deleteCommunity,
-  updateCommunity,
 };

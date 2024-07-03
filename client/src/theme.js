@@ -1,16 +1,26 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material";
 
-const theme = createTheme({
+export const themeSettings = createTheme({
   palette: {
-    dark: {
-      primaryDark: "#171515",
-      primaryLight: "#3D3434",
+    mode: "dark",
+    primary: {
+      main: "#625B5B",
+      dark: "#171515",
+      light: "#3D3434",
+      neutral: "#242020",
       hover: "#282020",
     },
-  },
-  typography: {
-    fontFamily: "Arial",
+    secondary: {
+      // blue
+      main: "#4074DC",
+    },
+    background: {
+      default: "#171515",
+    },
+    typography: {
+      fontFamily: "Helvetica",
+    },
   },
 });
 
-export default theme;
+export default themeSettings;

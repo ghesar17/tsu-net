@@ -18,7 +18,7 @@ import {
 import { useState } from "react";
 
 const Sidebar = (props) => {
-  const [dropdownOpen, setDropdown] = useState([]);
+  const [dropdownOpen, setDropdown] = useState(false);
 
   const handleDropdownClick = () => {
     setDropdown(!dropdownOpen);
@@ -39,8 +39,11 @@ const Sidebar = (props) => {
   //   const sidebarItems = props.sidebarItems;
 
   const theme = useTheme();
-  const lightBrown = theme.palette.dark.primaryLight;
-  const hover = theme.palette.dark.hover;
+  const main = theme.palette.primary.main;
+  const primaryDark = theme.palette.primary.dark;
+  const primaryLight = theme.palette.primary.light;
+  const hover = theme.palette.primary.hover;
+  const neutral = theme.palette.primary.neutral;
 
   return (
     <Box position="fixed" top={75} left={20} width="240px">

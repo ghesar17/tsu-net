@@ -10,10 +10,11 @@ import FlexBetween from "./UI/FlexBetween";
 
 const MainFeed = () => {
   const theme = useTheme();
-
-  const hover = theme.palette.dark.hover;
-  const primaryLight = theme.palette.dark.primaryLight;
-  const primaryDark = theme.palette.dark.primaryDark;
+  const main = theme.palette.primary.main;
+  const primaryDark = theme.palette.primary.dark;
+  const primaryLight = theme.palette.primary.light;
+  const hover = theme.palette.primary.hover;
+  const neutral = theme.palette.primary.neutral;
 
   const userName1 = "nycSHRIKE";
   const userName2 = "LMFAO";

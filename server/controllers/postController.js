@@ -1,8 +1,7 @@
-const Post = require("../models/postModel");
+import Post from "../models/postModel.js";
+import mongoose from "mongoose";
 
-const mongoose = require("mongoose");
-
-const getPost = async (req, res) => {
+export const getPost = async (req, res) => {
   const { postID } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(postID)) {
@@ -19,7 +18,7 @@ const getPost = async (req, res) => {
 };
 
 // anyone can get all of a user's posts
-const getUserPosts = async (req, res) => {
+export const getUserPosts = async (req, res) => {
   const { user_name } = req.params;
 
   const posts = await Post.find({ user_name }).sort({ createdAt: -1 });
@@ -27,7 +26,7 @@ const getUserPosts = async (req, res) => {
   res.status(200).json(posts);
 };
 
-const getRandomPosts = async (req, res) => {
+export const getRandomPosts = async (req, res) => {
   try {
     const randomPosts = await Post.aggregate([{ $sample: { size: 10 } }]);
     res.status(200).json(randomPosts);
@@ -37,7 +36,7 @@ const getRandomPosts = async (req, res) => {
 };
 
 // assume authorization has been given to end user for following methods
-const createPost = async (req, res) => {
+export const createPost = async (req, res) => {
   const { picture_path } = req.file;
 
   const { user_name, title, community, content, likes } = req.body;
@@ -51,7 +50,7 @@ const createPost = async (req, res) => {
   } else {
     // If it is an array, filter out any invalid comments
     comments = comments.filter((comment) =>
-      mongoose.Types.ObjectId.isValid(comment),
+      mongoose.Types.ObjectId.isValid(comment)
     );
   }
 
@@ -72,7 +71,7 @@ const createPost = async (req, res) => {
   }
 };
 
-const deletePost = async (req, res) => {
+export const deletePost = async (req, res) => {
   const { postID } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(postID)) {
@@ -88,7 +87,7 @@ const deletePost = async (req, res) => {
   res.status(200).json(post);
 };
 
-const updatePost = async (req, res) => {
+export const updatePost = async (req, res) => {
   const { postID } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(postID)) {
@@ -99,7 +98,7 @@ const updatePost = async (req, res) => {
     { _id: postID },
     {
       ...req.body,
-    },
+    }
   );
 
   if (!post) {
@@ -109,11 +108,3 @@ const updatePost = async (req, res) => {
   res.status(200).json(post);
 };
 
-module.exports = {
-  getPost,
-  getUserPosts,
-  getRandomPosts,
-  createPost,
-  deletePost,
-  updatePost,
-};

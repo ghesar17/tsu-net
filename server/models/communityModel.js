@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const communitySchema = new mongoose.Schema(
   {
@@ -30,4 +30,6 @@ const communitySchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-module.exports = mongoose.model("Community", communitySchema);
+const Community = mongoose.model("Community", communitySchema);
+
+export default Community;

@@ -1,8 +1,16 @@
-:root {
-  --main-theme-dark: #171515;
-  --font-stack: "Arial", serif;
+body,
+#root {
+  color: white;
+  background: #171515;
+  box-sizing: border-box;
 }
 
-body {
-  background: var(--main-theme-dark);
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 1rem;
 }

@@ -1,18 +1,17 @@
-const User = require("../models/userModel");
+import User from "../models/userModel.js";
+import mongoose from "mongoose";
 
-const mongoose = require("mongoose");
-
-const getUsers = async (req, res) => {
+export const getUsers = async (req, res) => {
   // the object is empty because we want ALL users from our db
   const users = await User.find({});
 
   res.status(200).json(users);
 };
 
-const getUser = async (req, res) => {
-  const { user_name } = req.params;
+export const getUser = async (req, res) => {
+  const { id } = req.params;
 
-  const user = await User.find({ user_name: user_name });
+  const user = await User.findById(id);
 
   if (!user || user.length === 0) {
     return res.status(404).json({ error: "User doesn't exist" });
@@ -21,7 +20,7 @@ const getUser = async (req, res) => {
   res.status(200).json(user);
 };
 
-const createUser = async (req, res) => {
+export const createUser = async (req, res) => {
   const {
     user_name,
     first_name,
@@ -57,7 +56,7 @@ const createUser = async (req, res) => {
   }
 };
 
-const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) => {
   const { user_name } = req.params;
 
   const user = await User.findOneAndDelete({ user_name: user_name });
@@ -69,14 +68,14 @@ const deleteUser = async (req, res) => {
   res.status(200).json(user);
 };
 
-const updateUser = async (req, res) => {
+export const updateUser = async (req, res) => {
   const { user_name } = req.params;
 
   const user = await User.findOneAndUpdate(
     { user_name: user_name },
     {
       ...req.body,
-    },
+    }
   );
 
   if (!user) {
@@ -84,12 +83,4 @@ const updateUser = async (req, res) => {
   }
 
   res.status(200).json(user);
-};
-
-module.exports = {
-  createUser,
-  getUser,
-  getUsers,
-  deleteUser,
-  updateUser,
 };

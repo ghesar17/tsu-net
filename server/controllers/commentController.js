@@ -1,8 +1,8 @@
-const Comment = require("../models/commentModel");
+import Comment from "../models/commentModel.js";
 
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const getComments = async (req, res) => {
+export const getComments = async (req, res) => {
   const { postID } = req.params;
   const comments = await Comment.find({ postID }).sort({ createdAt: -1 });
 
@@ -10,7 +10,7 @@ const getComments = async (req, res) => {
 };
 
 // assume authorization has been given to end user for following methods
-const createComment = async (req, res) => {
+export const createComment = async (req, res) => {
   const { postID, user_name, content, likes } = req.body;
 
   //add doc to db
@@ -27,7 +27,7 @@ const createComment = async (req, res) => {
   }
 };
 
-const deleteComment = async (req, res) => {
+export const deleteComment = async (req, res) => {
   const { commentID } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(commentID)) {
@@ -43,7 +43,7 @@ const deleteComment = async (req, res) => {
   res.status(200).json(comment);
 };
 
-const updateComment = async (req, res) => {
+export const updateComment = async (req, res) => {
   const { commentID } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(commentID)) {
@@ -54,7 +54,7 @@ const updateComment = async (req, res) => {
     { _id: commentID },
     {
       ...req.body,
-    },
+    }
   );
 
   if (!comment) {
@@ -62,11 +62,4 @@ const updateComment = async (req, res) => {
   }
 
   res.status(200).json(comment);
-};
-
-module.exports = {
-  getComments,
-  createComment,
-  deleteComment,
-  updateComment,
 };

@@ -1,26 +1,27 @@
-const express = require("express");
+import express from "express";
 
-const upload = require("../multerConfig");
+// const upload = require("../multerConfig");
 
-const {
+import {
   getCommunity,
   createCommunity,
   deleteCommunity,
   updateCommunity,
-} = require("../controllers/communityController");
+} from '../controllers/communityController.js';
+
 
 const router = express.Router();
 
-router.get("/:community_name", getCommunity);
+router.get("/:community_id", getCommunity);
 
 router.get("/", getCommunity);
 
 // only user can use these operations
-router.post("/", upload.single("icon"), createCommunity);
+// router.post("/", upload.single("icon"), createCommunity);
 
 // requires the community id for following operations
-router.delete("/:community_name", deleteCommunity);
+router.delete("/:community_id", deleteCommunity);
 
-router.patch("/:community_name", updateCommunity);
+router.patch("/:community_id", updateCommunity);
 
-module.exports = router;
+export default router;

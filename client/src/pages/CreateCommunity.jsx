@@ -18,7 +18,7 @@ const CreateCommunity = () => {
     formData.append("icon", icon);
     formData.append("description", description);
 
-    const response = await fetch("http://localhost:9000/api/communities", {
+    const response = await fetch("http://localhost:9000/communities", {
       method: "POST",
       body: formData,
     });

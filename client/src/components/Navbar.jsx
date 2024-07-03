@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
+  Box,
   Button,
   Typography,
   useTheme,
   useMediaQuery,
   InputBase,
   IconButton,
+  TextField,
   Menu,
   MenuItem,
+  FormControl,
+  Modal,
+  Link,
 } from "@mui/material";
+
+import Form from "./widgets/Form";
+
 import SettingsIcon from "@mui/icons-material/Settings";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -18,27 +26,21 @@ import Tsunet from "../assets/tsunet-white.png";
 import FlexBetween from "./UI/FlexBetween";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const theme = useTheme();
-  const primaryLight = theme.palette.dark.primaryLight;
-  const primaryDark = theme.palette.dark.primaryDark;
+  const main = theme.palette.primary.main;
+  const primaryDark = theme.palette.primary.dark;
+  const primaryLight = theme.palette.primary.light;
+  const hover = theme.palette.primary.hover;
+  const neutral = theme.palette.primary.neutral;
+
+  const blue = theme.palette.secondary.main;
 
   const showSiteTitle = useMediaQuery("(min-width: 640px)");
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  // useEffect(() => {
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [showOptions]);
+  const [openLogin, setLoginOpen] = useState(false);
+  const handleLoginToggle = () => setLoginOpen(!openLogin);
 
   return (
     <FlexBetween
@@ -51,12 +53,12 @@ const Navbar = () => {
       left="0"
       zIndex="99"
     >
-      <FlexBetween marginLeft="10px" gap="15px">
+      <FlexBetween onClick={() => navigate("/")} marginLeft="10px" gap="15px">
         <img width="40px" src={Tsunet}></img>
 
         {showSiteTitle && (
           <Typography
-            color="white"
+            fontFamily={"Arial"}
             fontSize="clamp(1rem, 2rem, 2.25rem)"
             fontWeight="bold"
           >
@@ -70,7 +72,7 @@ const Navbar = () => {
         borderRadius="15px"
         padding="0.1rem 1.5rem"
       >
-        <InputBase sx={{ color: "white" }} placeholder="Search..." />
+        <InputBase placeholder="Search..." />
         <IconButton>
           <SearchIcon sx={{ color: "gray" }} />
         </IconButton>
@@ -81,20 +83,13 @@ const Navbar = () => {
           <Button
             sx={{ width: "80px", color: "white", backgroundColor: "green" }}
             variant="text"
+            onClick={handleLoginToggle}
           >
             Log In
           </Button>
-        </FlexBetween>
-
-        <FlexBetween>
-          <Button onClick={handleClick}>
-            <SettingsIcon />
-          </Button>
-          <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
-          </Menu>
+          <Modal open={openLogin} onClose={handleLoginToggle}>
+            <Form />
+          </Modal>
         </FlexBetween>
       </FlexBetween>
     </FlexBetween>

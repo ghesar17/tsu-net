@@ -1,23 +1,25 @@
-const express = require('express');
+import express from "express";
 
-const {
-    createUser,
-    getUser,
-    getUsers,
-    updateUser,
-    deleteUser,
-} = require('../controllers/userController')
+import {
+  createUser,
+  getUser,
+  getUsers,
+  updateUser,
+  deleteUser,
+} from "../controllers/userController.js";
+
+import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.get('/',getUsers)
+router.get("/", getUsers);
 
-router.get('/:user_name',getUser)
+router.get("/:id", getUser);
 
-router.post('/',createUser)
+router.post("/", createUser);
 
-router.delete('/:user_name',deleteUser)
+router.delete("/:id", deleteUser);
 
-router.patch('/:user_name',updateUser)
+router.patch("/:id", updateUser);
 
-module.exports = router
+export default router;

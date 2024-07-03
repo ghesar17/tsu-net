@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -8,24 +8,36 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
+      min: 2,
+      max: 50,
     },
     first_name: {
       type: String,
       required: true,
+      min: 2,
+      max: 50,
     },
     last_name: {
       type: String,
       required: true,
+      min: 2,
+      max: 50,
     },
     email: {
       type: String,
       required: true,
+      max: 50,
       validate: {
         validator: function (v) {
           return /\S+@\S+\.\S+/.test(v);
         },
         message: (props) => `${props.value} is not a valid email!`,
       },
+    },
+    password: {
+      type: String,
+      required: true,
+      min: 5,
     },
     phone: {
       type: String,
@@ -37,6 +49,7 @@ const userSchema = new Schema(
     },
     picture_path: {
       type: String,
+      default: "",
     },
     profession: {
       type: String,
@@ -54,7 +67,9 @@ const userSchema = new Schema(
       required: true,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
-module.exports = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+
+export default User;

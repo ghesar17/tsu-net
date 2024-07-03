@@ -1,11 +1,11 @@
-const express = require("express");
+import express from "express";
 
-const {
+import {
   createComment,
   getComments,
   updateComment,
   deleteComment,
-} = require("../controllers/commentController");
+} from "../controllers/commentController.js";
 
 const router = express.Router();
 
@@ -19,4 +19,4 @@ router.delete("/:commentID", deleteComment);
 
 router.patch("/:commentID", updateComment);
 
-module.exports = router;
+export default router;
